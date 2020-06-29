@@ -1,5 +1,6 @@
 # Service Worker (PWA) for Neos
 This packages adds a basic configuration to precache content using service worker with google workbox.
+Furthermore it will add a "Add to homescreen" for your devices who are supporting it.
 
 ## Setup
 Run `composer require diu/neos-pwa`
