@@ -2,7 +2,7 @@
 This packages adds a basic configuration to precache content using service worker with google workbox.
 
 ## Setup
-Run `composer require diu/neos-serviceworker`
+Run `composer require diu/neos-pwa`
 
 ### Configuration
 Copy the following files to your site package and change the values to your need:
