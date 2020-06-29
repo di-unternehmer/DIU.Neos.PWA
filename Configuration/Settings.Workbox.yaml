@@ -1,0 +1,9 @@
+DIU:
+  Neos:
+    PWA:
+      Workbox:
+        globDirectory: 'Web/'
+        globPatterns:
+#          - '_Resources/Static/Packages/{DIU}.*/**/*.{js,css,gif,jpg,svg,png,webp,woff,woff2}'
+        globFollow: true
+        swDest: 'Web/sw.js'

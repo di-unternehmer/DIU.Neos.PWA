@@ -1,0 +1,24 @@
+include: Components/**/*.fusion
+
+prototype(Neos.Neos:Page) {
+
+    head {
+        manifest = DIU.Neos.PWA:Manifest
+        mobileWebAppCapable = '<meta name="mobile-web-app-capable" content="yes">'
+        appleMobileWebAppCapable = '<meta name="apple-mobile-web-app-capable" content="yes">'
+        msapplicationStarturl = ${'<meta name="msapplication-starturl" content="' + Configuration.setting('DIU.Neos.PWA.MsApplication.starturl') + '">'}
+        msapplicationTileColor = ${'<meta name="msapplication-TileColor" content="' + Configuration.setting('DIU.Neos.PWA.MsApplication.tileColor') + '">'}
+        msapplicationTileImage = Neos.Fusion:Tag {
+            tagName = 'meta'
+            content = Neos.Fusion:ResourceUri {
+                path = ${Configuration.setting('DIU.Neos.PWA.MsApplication.tileImage')}
+            }
+            attributes.name = 'msapplication-TileImage'
+        }
+    }
+
+    body.javascripts {
+        initSW = DIU.Neos.PWA:RegisterSW
+        initSW.@position = 'after main'
+    }
+}

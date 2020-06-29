@@ -1,0 +1,9 @@
+prototype(DIU.Neos.PWA:Manifest) < prototype(Neos.Fusion:Component) {
+    renderer = Neos.Fusion:Tag {
+        tagName = 'link'
+        attributes {
+            rel = 'manifest'
+            href = 'manifest.json'
+        }
+    }
+}

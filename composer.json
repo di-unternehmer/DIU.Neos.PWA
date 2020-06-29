@@ -1,0 +1,20 @@
+{
+    "name": "diu/neos-pwa",
+    "license": "MIT",
+    "description": "",
+    "type": "neos-plugin",
+    "require": {
+        "neos/neos": "^4.3 || ^5.0",
+        "neos/fusion-afx": "*"
+    },
+    "extra": {
+        "neos": {
+            "package-key": "DIU.Neos.PWA"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "DIU\\Neos\\PWA\\": "Classes"
+        }
+    }
+}

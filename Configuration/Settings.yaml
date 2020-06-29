@@ -1,0 +1,10 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        'DIU.Neos.PWA': true
+  Flow:
+    mvc:
+      routes:
+        'DIU.Neos.PWA':
+          position: 'before Neos.Neos'

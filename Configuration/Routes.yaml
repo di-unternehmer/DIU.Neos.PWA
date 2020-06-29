@@ -1,0 +1,9 @@
+-
+  name: 'Manifest'
+  uriPattern: 'manifest.json'
+  defaults:
+    '@package': 'DIU.Neos.PWA'
+    '@controller': 'Manifest'
+    '@action': 'index'
+  httpMethods: ['GET']
+  appendExceedingArguments: FALSE

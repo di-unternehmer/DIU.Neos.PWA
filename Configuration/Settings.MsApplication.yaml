@@ -1,0 +1,8 @@
+DIU:
+  Neos:
+    PWA:
+      MsApplication:
+        starturl: '/'
+        # Background color of the tile (hex value)
+        tileColor: ''
+        tileImage: ''

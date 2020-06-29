@@ -1,0 +1,12 @@
+privilegeTargets:
+  'Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
+    'DIU.Neos.PWA:Manifest':
+      matcher: 'method(DIU\Neos\PWA\Controller\ManifestController->indexAction())'
+
+
+roles:
+  'Neos.Flow:Everybody':
+    privileges:
+      -
+        privilegeTarget: 'DIU.Neos.PWA:Manifest'
+        permission: GRANT

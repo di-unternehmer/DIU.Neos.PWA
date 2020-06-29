@@ -1,0 +1,9 @@
+DIU\Neos\PWA\Controller\ManifestController:
+  properties:
+    cacheFrontend:
+      object:
+        factoryObjectName: Neos\Flow\Cache\CacheManager
+        factoryMethodName: getCache
+        arguments:
+          1:
+            value: DIU_Neos_PWA_Manifest

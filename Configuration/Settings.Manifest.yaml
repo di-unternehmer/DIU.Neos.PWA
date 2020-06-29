@@ -1,0 +1,72 @@
+DIU:
+  Neos:
+    PWA:
+      Manifest:
+        # App name
+        name: ''
+
+        # Name below your app icon
+        short_name: ''
+
+        # Language of your page, e.g. 'en-EN' or 'de-DE'
+        lang: 'en-EN'
+
+        # Hex value
+        theme_color: '#'
+
+        # Splash screen background color (hex value)
+        background_color: ''
+
+        # Valid value: 'browser','standalone','minimal-ui','fullscreen'
+        display: 'standalone'
+
+        # Activate orientation to set 'landscape' or 'portrait' default is 'any'
+        # orientation = 'portrait'
+
+        # Application scope
+        scope: '/'
+
+        start_url: '/'
+
+        # splash_pages: ''
+
+        # Array/List of icons with relative rendered path
+        # example:
+        #    {
+        #       "src": "_Resources/Static/Packages/Vendor.Site/icons/icon-72x72.png",
+        #       "sizes": "72x72",
+        #       "type": "image/png"
+        #    }
+        icons:
+#          -
+#            src: 'resource://Vendor.Site/Public/Icons/icon-72x72.png'
+#            sizes: '72x72'
+#            type: 'image/png'
+#          -
+#            src: 'resource://Vendor.Site/Public/Icons/icon-96x96.png'
+#            sizes: '96x96'
+#            type: 'image/png'
+#          -
+#            src: 'resource://Vendor.Site/Public/Icons/icon-128x128.png'
+#            sizes: '128x128'
+#            type: 'image/png'
+#          -
+#            src: 'resource://Vendor.Site/Public/Icons/icon-144x144.png'
+#            sizes: '144x144'
+#            type: 'image/png'
+#          -
+#            src: 'resource://Vendor.Site/Public/Icons/icon-152x152.png'
+#            sizes: '152x152'
+#            type: 'image/png'
+#          -
+#            src: 'resource://Vendor.Site/Public/Icons/icon-192x192.png'
+#            sizes: '192x192'
+#            type: 'image/png'
+#          -
+#            src: 'resource://Vendor.Site/Public/Icons/icon-384x384.png'
+#            sizes: '384x384'
+#            type: 'image/png'
+#          -
+#            src: 'resource://Vendor.Site/Public/Icons/icon-512x512.png'
+#            sizes: '512x512'
+#            type: 'image/png'
