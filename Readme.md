@@ -28,7 +28,7 @@ We recommend to use DDEV as you need a valid https connection, but it should als
 
  - make sure you have installed the package
  - Run `./flow pwa:create`
- - Run `yarn add workbox-cli && npx workbox-cli generateSW`
+ - Run `yarn add workbox-cli && npx workbox generateSW`
  (instead of yarn you can also use `npm install workbox-cli`) 
  
 
