@@ -3,7 +3,7 @@ prototype(DIU.Neos.PWA:Manifest) < prototype(Neos.Fusion:Component) {
         tagName = 'link'
         attributes {
             rel = 'manifest'
-            href = 'manifest.json'
+            href = '/manifest.json'
         }
     }
 }
