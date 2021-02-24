@@ -4,7 +4,7 @@
     "description": "",
     "type": "neos-plugin",
     "require": {
-        "neos/neos": "^4.3 || ^5.0",
+        "neos/neos": "^4.3 || ^5.0 || ^7.0",
         "neos/fusion-afx": "*"
     },
     "extra": {
