@@ -4,6 +4,7 @@
     "description": "",
     "type": "neos-plugin",
     "require": {
+        "ext-json": "*",
         "neos/neos": "^4.3 || ^5.0 || ^7.0",
         "neos/fusion-afx": "*"
     },

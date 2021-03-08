@@ -10,7 +10,7 @@ use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Cli\CommandController;
 use Neos\Flow\Cli\Exception\StopCommandException;
 use Neos\Utility\Files;
-
+use Symfony\Component\Yaml\Yaml;
 
 class PwaService
 {
@@ -93,18 +93,23 @@ class PwaService
         return $workboxConfigContent;
     }
 
-    private function json_encode_advanced(array $arr, $sequential_keys = false, $quotes = false, $beautiful_json = false) {
+    private function json_encode_advanced(array $arr, $sequential_keys = false, $quotes = false, $beautiful_json = false, $indent = 0) {
+
+        $indentSpace = "";
+        for ($i = 0;  $i < $indent; $i++) {
+            $indentSpace .= " ";
+        }
 
         $output = $this->isAssoc($arr) ? "{\n" : "[";
         $count = 0;
         foreach ($arr as $key => $value) {
 
             if ($this->isAssoc($arr) || (!$this->isAssoc($arr) && $sequential_keys === true )) {
-                $output .= ($quotes ? '"' : '') . "    " . $key . ($quotes ? '"' : '') . ': ';
+                $output .= ($quotes ? "'" : "") . "    " . $indentSpace . $key . ($quotes ? "'" : "") . ": ";
             }
 
             if (is_array($value)) {
-                $output .= $this->json_encode_advanced($value, $sequential_keys, $quotes, $beautiful_json);
+                $output .= $this->json_encode_advanced($value, $sequential_keys, $quotes, $beautiful_json, $indent + 2);
             }
             else if (is_bool($value)) {
                 $output .= ($value ? 'true' : 'false');
@@ -112,15 +117,18 @@ class PwaService
             else if (is_numeric($value)) {
                 $output .= $value;
             }
+            else if ( strcmp($key,'urlPattern') === 0 ) {
+                $output .= $value;
+            }
             else {
-                $output .= ($quotes || $beautiful_json ? '"' : '') . $value . ($quotes || $beautiful_json ? '"' : '');
+                $output .= ($quotes || $beautiful_json ? "'" : "") . $value . ($quotes || $beautiful_json ? "'" : "");
             }
 
             if (++$count < count($arr)) {
                 $output .= ", \n";
             }
         }
-        $output .= $this->isAssoc($arr) ? "\n}" : "]";
+        $output .= $this->isAssoc($arr) ? "\n" . $indentSpace . "}" : "]";
 
         return $output;
     }
