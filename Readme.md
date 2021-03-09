@@ -37,6 +37,26 @@ We recommend to use DDEV as you need a valid https connection, but it should als
  
 
 ### Add to your CI/CD pipeline
+
+Workbox needs your paths to static resources. Therefore, you have to provide a complete "build" environment.
+We suggest to add a new FLOW_CONTEXT like `Development\Workbox\Settings.db.yaml` where you add a setting for 
+an in-memory sqlite database:
+
+```yaml
+    Neos:
+      Flow:
+        persistence:
+          backendOptions:
+            driver: 'pdo_sqlite'
+            path: ':memory:'
+            username: NULL
+            password: NULL
+          doctrine:
+            cacheImplementation: NULL
+            dbname: 'flow_functional_testing'
+```
+
+
 Add these build steps:
 
   - Run `./flow resource:publish --collection static` as workbox needs the static files while building the service worker in next step
