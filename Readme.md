@@ -39,11 +39,14 @@ We recommend to use DDEV as you need a valid https connection, but it should als
 ### Add to your CI/CD pipeline
 Add these build steps:
 
-  - `npm add workbox-cli && npx workbox-cli generateSW` This will generate your service worker, based on the workbox-config2.js in your `/Web` directory 
+  - Run `./flow resource:publish --collection static` as workbox needs the static files while building the service worker in next step
+  - `npm add workbox-cli && npx workbox-cli generateSW` This will generate your service worker, based on the workbox-config.js in your `/Web` directory 
   
 (instead of yarn you can also use `yarn install workbox-cli`) 
 
 
 ## Roadmap
 1. Autogenerate all favicon/icons based on Manifest.yaml and add them to the header
-2. If somehow possible generate workbox-config.json on composer install, based on the provided Settings.Workbox.yaml
+
+## Sponsor
+This Neos plugin is kindly sponsored by DI Unternehmer - Digitalagentur GmbH
