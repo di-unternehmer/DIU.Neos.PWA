@@ -4,7 +4,7 @@ DIU:
       Workbox:
         globDirectory: 'Web/'
         globPatterns:
-#          - '_Resources/Static/Packages/{DIU,Sitegeist}.*/**/*.{js,css,gif,jpg,svg,png,webp,woff,woff2}'
+#          - '_Resources/Static/Packages/{DIU}.*/**/*.{js,css,gif,jpg,svg,png,webp,woff,woff2}'
         globFollow: true
         swDest: 'Web/sw.js'
 
