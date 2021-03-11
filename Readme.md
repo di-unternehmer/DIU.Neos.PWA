@@ -33,7 +33,7 @@ We recommend to use DDEV as you need a valid https connection, but it should als
 
  - make sure you have installed the package
  - Run `npm add workbox-cli && npx workbox generateSW`
- (instead of yarn you can also use `yarn install workbox-cli`) 
+ (instead of npm you can also use `yarn add workbox-cli`) 
  
 
 ### Add to your CI/CD pipeline
@@ -62,7 +62,7 @@ Add these build steps:
   - Run `./flow resource:publish --collection static` as workbox needs the static files while building the service worker in next step
   - `npm add workbox-cli && npx workbox-cli generateSW` This will generate your service worker, based on the workbox-config.js in your `/Web` directory 
   
-(instead of yarn you can also use `yarn install workbox-cli`) 
+(instead of npm you can also use `yarn add workbox-cli`) 
 
 
 ## Roadmap
