@@ -22,3 +22,11 @@ prototype(Neos.Neos:Page) {
         initSW.@position = 'after main'
     }
 }
+
+root {
+    shortcut {
+        prototype(Neos.Neos:Page) {
+            body.javascripts >
+        }
+    }
+}
